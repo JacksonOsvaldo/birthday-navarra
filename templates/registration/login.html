@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Login</h1>
+
+<form class="form-group" method="post">
+   {% csrf_token %}
+   <div class="form-group">
+      {{form.as_p}}
+   </div>
+   <button type="submit" class="btn btn-primary">Entrar</button>
+   <p>
+   <div>
+      <a href="/accounts/sign_up/">Cadastro</a>
+   </div>
+</form>
+{% endblock content %}

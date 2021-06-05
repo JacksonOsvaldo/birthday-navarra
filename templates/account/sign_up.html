@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Cadastro</h1>
+<form class="form-group" method="post">
+   {% csrf_token %}
+   <div class="form-group">
+      {{form.as_p}}
+   </div>
+   <button type="submit" class="btn btn-primary">Cadastrar</button>
+   <p>
+   <div>
+      <a href="/">Login</a>
+   </div>
+</form>
+{% endblock content %}
